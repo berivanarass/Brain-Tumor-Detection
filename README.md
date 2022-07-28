@@ -9,9 +9,17 @@ I developed the project in Google Colab environment. Also I imported Keras libra
 ## Train/Test Split
 With the help of ImageDataGenerator, images that were splited before as train and test are called. The Batch size has been chosen as 16 and target size has been chosen as (224x224). It can be seen below the examples from the both classes.  
 
-foto
+Example for "Yes"
 
-foto
+<p align="center">
+<img src="img/Y4.jpg">
+</p>
+
+Example for "No" 
+
+<p align="center">
+<img src="img/3no.jpg">
+</p>
 
 
 ## Generating Model and Preparation for Training
@@ -19,7 +27,22 @@ The input size of image for VGG19 has been chosen as 224x224x3. After training w
 
 The model has been compiled with loss function equals to binary_crossentropy which is used for binary classification problems. Its optimizer equals to Adam optimizer. The metric to calculate the model's efficiency has been chosen as Accuracy. 
 
-foto
+<table>
+  
+  <tr>
+    <td> VGG19 </td>
+  </tr>
+  <tr>
+    <td> Flatten </td>
+  </tr>
+  <tr>
+    <td> Dropout 0.4 </td>
+  </tr>
+  <tr>
+    <td> 1-Dense-Sigmoid </td>
+  </tr>
+  
+</table>
 
 ## Training Process
 The training has been begun with using 60 epochs. Loss and accuracy for training set respectively equals to 0.6757, 0.6856 and for validation set respectively equals to 0.4282, 0.8333 for the first epoch. And for the last epoch,  loss and accuracy for training set respectively equals to 0.0344, 0.9956 and for validation set respectively equals to 0.1787, 0.9167. The training has been run for three hours by using Google Colab's CPU. 
@@ -30,7 +53,9 @@ According to the test results, the model has been performed %83 of accuracy and 
 ## Prediction
 After the training process was completed, a prediction process was performed on the data shown above and the tumor was found. The size of the image has been adjusted to 224x224 by using OpenCV library. Then, it reshaped to a tensor to prediction process. With predict method from Keras library, the prediction has been done. The result 0 denotes without tumor, the result 1 denotes with tumor. Then this prediction process has been applied to all the images that were splited for testing. Some of the results have been shown below. 
 
-foto
+<p align="center">
+<img src="img/Fotoram.io (1).jpg">
+</p>
 
 
 
