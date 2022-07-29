@@ -54,7 +54,7 @@ According to the test results, the model has been performed %83 of accuracy and 
 After the training process was completed, a prediction process was performed on the data shown above and the tumor was found. The size of the image has been adjusted to 224x224 by using OpenCV library. Then, it reshaped to a tensor to prediction process. With predict method from Keras library, the prediction has been done. The result 0 denotes without tumor, the result 1 denotes with tumor. Then this prediction process has been applied to all the images that were splited for testing. Some of the results have been shown below. 
 
 <p align="center">
-<img src="img/Fotoram.io (1).jpg">
+<img src="img/Fotoram.io (2).jpg">
 </p>
 
 
